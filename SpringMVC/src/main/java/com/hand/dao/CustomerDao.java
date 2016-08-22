@@ -25,7 +25,7 @@ public interface CustomerDao {
 
     List<Customer> selectCustomer();
     int updateByPrimaryKey(Customer record);
-    
+   // public void insertCustomer(@Param("storeId")Byte storeId,@Param("firstName")String firstName,@Param("lastName")String lastName,@Param("email")String email);
   //  public List selectCustomerName();
     
 }

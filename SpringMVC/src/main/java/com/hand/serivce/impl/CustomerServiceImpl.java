@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 
+
 import org.springframework.stereotype.Service;
 
 import com.hand.dao.CustomerDao;
@@ -44,6 +45,19 @@ public class CustomerServiceImpl implements CustomerService {
 	
 		return this.customerDao.selectCustomer();
 	}
+
+	@Override
+	public void addCustomer(Customer record) {
+		// TODO Auto-generated method stub
+		customerDao.insertSelective(record);
+	}
+
+/*	@Override
+	public void addCustomer(Byte store_id,String firstName, String lastName, String email) {
+		
+		customerDao.insertCustomer(store_id,firstName, lastName, email);
+		
+	}*/
 
 	
 }
